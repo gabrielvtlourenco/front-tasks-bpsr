@@ -171,7 +171,8 @@ export default function CharactersPage() {
           {characters.map((char) => (
             <div
               key={char.id}
-              className="bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 text-white rounded-xl p-4 shadow-lg backdrop-blur-md flex flex-col justify-between"
+              onClick={() => navigate(`/character/${char.id}`)}
+              className="cursor-pointer bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 text-white rounded-xl p-4 shadow-lg backdrop-blur-md flex flex-col justify-between hover:scale-105 transition-transform"
             >
               <div>
                 <h3 className="text-xl font-semibold">{char.name}</h3>
